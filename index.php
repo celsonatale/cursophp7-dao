@@ -2,10 +2,20 @@
 
 require_once("config.php");
 
-$root = new Usuario();
+//Carrega um usuário
+//$root = new Usuario();
+//$root->loadbyId(3);
+//echo $root;
 
-$root->loadbyId(3);
+//Carrega lista de usuários
+//$lista = Usuario::getlist();
+//echo json_encode($lista)."<br>";
 
-echo $root;
+//carrega um usuario usando o login e a senha
+
+$usuario = new Usuario();
+$usuario->login("root", "@!@");
+
+echo $usuario;
 
 ?>
